@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# サイトマップの場所を指定
-Sitemap: https://zukaneditor.s323.xrea.com/sitemap.xml
-
-# クロール頻度（推奨）
-Crawl-delay: 1
