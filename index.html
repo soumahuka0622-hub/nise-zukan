@@ -71,6 +71,16 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  html, body {
+    width: 100%;
+    overflow-x: clip;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   body {
     background: var(--bg);
     color: var(--text);
@@ -918,13 +928,29 @@
     .zukan-grid { grid-template-columns: 1fr; }
     .hero-inner { grid-template-columns: 1fr; }
     .hero-image { display: none; }
-    nav { gap: 0.8rem; }
+    .header-inner {
+      padding: 0.75rem 1rem;
+      height: auto;
+      display: block;
+    }
+    .site-logo { margin-bottom: 0.65rem; }
+    nav {
+      gap: 0.8rem;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 0.2rem;
+    }
+    nav a, .nav-special { flex: 0 0 auto; }
+    .search-bar { flex: 0 0 140px; min-width: 140px; }
+    .search-input { width: 100%; }
+    .search-input:focus { width: 100%; }
     nav a { font-size: 0.72rem; }
     .site-title { font-size: 0.95rem; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
-    .header-inner { padding: 0 1rem; }
     .layout { padding: 1.5rem 1rem; }
-    .page-tabs { padding: 0 1rem; overflow-x: auto; }
+    .page-tabs { padding: 0 1rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .tab { white-space: nowrap; flex: 0 0 auto; }
   }
 
   /* ── スクロールバー ── */
