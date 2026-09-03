@@ -1208,7 +1208,7 @@
     </button>
     <button class="tab-btn" id="tabBtnBlog" onclick="switchTab('blog')">
       <span>観察記録</span>
-      <span class="tab-count-badge" id="blogCountBadge">6</span>
+      <span class="tab-count-badge" id="blogCountBadge">4</span>
     </button>
   </div>
   <div class="search-status-bar" id="searchStatusBar">
@@ -1242,7 +1242,7 @@
     <div class="tab-panel" id="panel-blog">
       <div class="section-headline">
         <div class="section-title-text">深層観察記録 — Report</div>
-        <div class="section-meta-info">6 ARCHIVES</div>
+        <div class="section-meta-info">4 ARCHIVES</div>
       </div>
 
       <div class="report-list" id="blogList">
@@ -1271,7 +1271,7 @@
           <span class="stat-lbl">収録標本数</span>
         </div>
         <div class="stat-card">
-          <span class="stat-val">6</span>
+          <span class="stat-val">4</span>
           <span class="stat-lbl">深層観察記録</span>
         </div>
         <div class="stat-card">
@@ -1439,54 +1439,38 @@ const fakeData = [
   { num: '①',  title: '①', excerpt: '【分類】 【主な言語特徴】 【行動パター…', date: '2025.12.17', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/siiiiii.png', url: 'http://zukaneditor.s323.xrea.com/fake/%e2%91%a0/' },
 ];
 
-// ── 観察記録ブログデータ（残存6件） ──────────────────────────────
+// ── 観察記録ブログデータ（指定の4件） ──────────────────────────────
 const blogData = [
   {
-    title: '解',
-    excerpt: '先に申しますと、今、普通に、冷静に書いています。…',
-    date: '2026年6月30日',
-    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/konnnaseikatusitaika-.jpg',
-    url: 'http://zukaneditor.s323.xrea.com/2026/06/30/__kai/',
+    title: '【偽物図鑑：深層分析】怪物の末路 ―― 歪んだ自己愛と肉体の乖離',
+    excerpt: 'これまで分析してきた数多くの人格群は、単なる「遊び」ではなく、「正視出来ない己の肉体と精神」を覆い隠す為の必死の埋没作業であった…',
+    date: '2025年12月23日',
+    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
+    url: 'http://zukaneditor.s323.xrea.com/2025/12/23/the-monsters-end/',
     cat: '未分類',
   },
   {
-    title: '正体はちっぽけで惨めな暮らししてる状態に居た堪れない劣等感満載故にやってるだけだった',
-    excerpt: '外で働く＝人と協力して行うことが出来ないから引き…',
-    date: '2026年3月6日',
+    title: '架空ペルソナ前提での「事実→物語」加工プロセス',
+    excerpt: 'ここでは「実在の容姿・属性を持たない、AI生成・架空ペルソナとして運用されている可能性」を前提条件に加え、分析モデルを一段メタなレイヤーに…',
+    date: '2025年12月18日',
     img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2026/03/06/kasu/',
+    url: 'http://zukaneditor.s323.xrea.com/2025/12/18/persona/',
     cat: '未分類',
   },
   {
-    title: '別に愛されなくても良くね？愛されるとこ全くないんだから',
-    excerpt: '自分で自分に話しかける行為、いつからなのか知らな…',
-    date: '2026年2月15日',
+    title: '未統合の聖と俗：『隠された傷』を冷笑へと転換する、ある独裁者の生存戦略',
+    excerpt: '（意味：過去の罪や苦痛を直視出来ず、他人を叩くことで自分を保とうとする歪んだ心の形）彼自身の内面にある罪悪感を直視できない為、女性を二極化し…',
+    date: '2025年12月18日',
     img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2026/02/15/its-fine-if-im-not-loved-right/',
+    url: 'http://zukaneditor.s323.xrea.com/2025/12/18/madonna-hoa-complex/',
     cat: '未分類',
   },
   {
-    title: '立派な爬虫類脳',
-    excerpt: '一回会ったことがあるのですがその時別の他人として…',
-    date: '2026年2月14日',
+    title: '【事実から物語への加工プロセス：4つの工程】',
+    excerpt: '提示されたブログ資料（偽物図鑑）および「奴」の人格分析に基づき、不都合な現実（事実）を都合の良い物語（ペルソナ）へ加工する全容を解明…',
+    date: '2025年12月18日',
     img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2026/02/14/chameleon/',
-    cat: '未分類',
-  },
-  {
-    title: '無意味に呟いてただ通り過ぎてるだけの人生',
-    excerpt: '朝スペースやって Discordもスペースみたい…',
-    date: '2026年1月12日',
-    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2026/01/12/000000/',
-    cat: '未分類',
-  },
-  {
-    title: '観察記録の公開と、その扱いについての整理',
-    excerpt: 'メンタルブレブレで、病んで大量コメントしまくっと…',
-    date: '2025年12月29日',
-    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2025/12/29/why/',
+    url: 'http://zukaneditor.s323.xrea.com/2025/12/18/process/',
     cat: '未分類',
   },
 ];
