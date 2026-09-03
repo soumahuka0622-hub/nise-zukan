@@ -6,7 +6,7 @@
 
 <!-- ── 基本SEO ── -->
 <title>偽物図鑑 | SNSアカウント観察・分類アーカイブ</title>
-<meta name="description" content="SNS上に存在する「偽りのアカウント」「仮面の人格」を分類・記録する観察図鑑。言語特徴・行動パターン・心理的背景を冷静に分析する71件のアーカイブ。">
+<meta name="description" content="SNS上に存在する「偽りのアカウント」「仮面の人格」を分類・記録する観察図鑑。言語特徴・行動パターン・心理的背景を冷静に分析する観察アーカイブ。">
 <meta name="keywords" content="偽物図鑑,SNSアカウント,観察記録,アカウント分析,人格分類,行動パターン,言語特徴,ネット観察">
 <meta name="author" content="ukaneditor">
 <meta name="robots" content="index, follow">
@@ -15,24 +15,21 @@
 <!-- ── OGP (Open Graph) ── -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="偽物図鑑 | SNSアカウント観察・分類アーカイブ">
-<meta property="og:description" content="SNS上に存在する「偽りのアカウント」「仮面の人格」を分類・記録する観察図鑑。71件のアーカイブ収録。">
+<meta property="og:description" content="SNS上に存在する「偽りのアカウント」「仮面の人格」を分類・記録する観察図鑑。標本アーカイブ収録。">
 <meta property="og:url" content="https://nise-zukan.vercel.app/">
 <meta property="og:site_name" content="偽物図鑑">
 <meta property="og:image" content="https://nise-zukan.vercel.app/og-image.png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:alt" content="偽物図鑑のメインビジュアル">
-<meta property="og:image:type" content="image/png">
 <meta property="og:locale" content="ja_JP">
 
 <!-- ── Twitter Card ── -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="偽物図鑑 | SNSアカウント観察・分類アーカイブ">
-<meta name="twitter:description" content="SNS上に存在する「偽りのアカウント」「仮面の人格」を分類・記録する観察図鑑。71件のアーカイブ収録。">
+<meta name="twitter:description" content="SNS上に存在する「偽りのアカウント」「仮面の人格」を分類・記録する観察図鑑。標本アーカイブ収録。">
 <meta name="twitter:url" content="https://nise-zukan.vercel.app/">
-<meta property="twitter:url" content="https://nise-zukan.vercel.app/">
 <meta name="twitter:image" content="https://nise-zukan.vercel.app/og-image.png">
-<meta name="twitter:image:alt" content="偽物図鑑のメインビジュアル">
 
 <!-- ── 構造化データ (JSON-LD) ── -->
 <script type="application/ld+json">
@@ -50,996 +47,1205 @@
 </script>
 
 <!-- ── Favicon ── -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230e0c0a' rx='12'/><text y='.9em' font-size='80' x='10' fill='%23b8860b'>偽</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2308090d' rx='20'/><circle cx='50' cy='50' r='40' stroke='%23ff2e5b' stroke-width='4' fill='none'/><text y='.72em' font-size='56' x='50' text-anchor='middle' fill='%23f1f5f9' font-family='sans-serif' font-weight='900'>偽</text></svg>">
 
+<!-- ── Google Fonts ── -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=DM+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Space+Grotesk:wght@400;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+
 <style>
   :root {
-    --bg: #900000;
-    --bg2: #700000;
-    --paper: #500000;
-    --border: rgba(255, 255, 255, 0.25);
-    --accent: #ffcc00;
-    --accent2: #ffaa00;
-    --text: #ffffff;
-    --text-dim: #ffcccc;
-    --text-bright: #ffffff;
-    --red: #ff4444;
-    --stamp: rgba(139, 32, 32, 0.18);
+    --bg-base: #07090e;
+    --bg-surface: #0e121a;
+    --bg-card: rgba(17, 24, 39, 0.65);
+    --bg-card-hover: rgba(26, 36, 56, 0.85);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 46, 91, 0.4);
+    --border-accent: rgba(245, 158, 11, 0.35);
+    
+    --accent-crimson: #ff2e5b;
+    --accent-crimson-glow: rgba(255, 46, 91, 0.25);
+    --accent-amber: #f59e0b;
+    --accent-amber-glow: rgba(245, 158, 11, 0.2);
+    --accent-cyan: #06b6d4;
+    
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    
+    --font-jp: 'Zen Kaku Gothic New', sans-serif;
+    --font-en: 'Space Grotesk', sans-serif;
+    --font-mono: 'DM Mono', monospace;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html, body {
-    width: 100%;
-    overflow-x: clip;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DotGothic16', sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    font-family: var(--font-jp);
     min-height: 100vh;
     overflow-x: hidden;
+    line-height: 1.65;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(255, 46, 91, 0.07) 0%, transparent 60%),
+      radial-gradient(circle at 100% 40%, rgba(245, 158, 11, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 0% 80%, rgba(6, 182, 212, 0.04) 0%, transparent 40%),
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
   }
 
-  /* ── ノイズテクスチャ ── */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.35;
+  /* ── アニメーション ── */
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(1000%); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   /* ── ヘッダー ── */
   .site-header {
-    border-bottom: 1px solid var(--border);
-    background: var(--bg2);
     position: sticky;
     top: 0;
     z-index: 100;
+    background: rgba(7, 9, 14, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-subtle);
   }
 
   .header-inner {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 64px;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .site-logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.9rem;
     text-decoration: none;
+    group: pointer;
   }
 
-  .logo-mark {
-    width: 36px;
-    height: 36px;
-    border: 1.5px solid var(--accent);
-    border-radius: 50%;
+  .logo-symbol {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 46, 91, 0.2), rgba(245, 158, 11, 0.1));
+    border: 1px solid rgba(255, 46, 91, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--accent);
-    letter-spacing: 0;
+    font-family: var(--font-jp);
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #ffffff;
+    box-shadow: 0 0 15px var(--accent-crimson-glow);
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
   }
 
-  .logo-mark::before {
-    content: '';
-    position: absolute;
-    inset: 3px;
-    border-radius: 50%;
-    border: 1px solid rgba(184,134,11,0.3);
+  .site-logo:hover .logo-symbol {
+    transform: rotate(6deg) scale(1.05);
+    box-shadow: 0 0 22px rgba(255, 46, 91, 0.5);
+    border-color: var(--accent-crimson);
+  }
+
+  .logo-text-group {
+    display: flex;
+    flex-direction: column;
   }
 
   .site-title {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--text-bright);
-    letter-spacing: 0.15em;
-  }
-
-  .site-title span {
-    color: var(--accent);
-    font-style: italic;
-  }
-
-  nav {
+    font-family: var(--font-jp);
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #ffffff;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0.3rem;
   }
 
-  nav a {
+  .site-title .accent-text {
+    color: var(--accent-crimson);
+    text-shadow: 0 0 12px var(--accent-crimson-glow);
+  }
+
+  .site-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
     color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  .nav-group {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .nav-link {
+    color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.78rem;
-    letter-spacing: 0.05em;
-    transition: color 0.2s;
-    white-space: nowrap;
-    position: relative;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: all 0.25s ease;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
   }
 
-  nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transition: transform 0.25s;
+  .nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
   }
 
-  nav a:hover { color: var(--accent); }
-  nav a:hover::after { transform: scaleX(1); }
-
-  .nav-special {
-    padding: 0.35rem 0.9rem;
-    border: 1px solid var(--accent2);
-    border-radius: 2px;
-    color: var(--accent) !important;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem !important;
-    letter-spacing: 0.08em;
-    transition: background 0.2s !important;
+  .nav-btn-highlight {
+    background: linear-gradient(135deg, rgba(255, 46, 91, 0.15), rgba(245, 158, 11, 0.1));
+    border: 1px solid rgba(255, 46, 91, 0.4);
+    color: #ff94ab !important;
+    font-family: var(--font-jp);
+    font-weight: 700;
+    padding: 0.45rem 0.95rem;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(255, 46, 91, 0.15);
+    transition: all 0.3s ease;
   }
 
-  .nav-special:hover { background: rgba(139,69,19,0.15) !important; }
-  .nav-special::after { display: none !important; }
+  .nav-btn-highlight:hover {
+    background: linear-gradient(135deg, rgba(255, 46, 91, 0.3), rgba(245, 158, 11, 0.2));
+    border-color: var(--accent-crimson);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(255, 46, 91, 0.35);
+  }
 
-  /* ── 検索バー ── */
-  .search-bar {
+  .nav-btn-tip {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #fcd34d !important;
+    padding: 0.45rem 0.9rem;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+
+  .nav-btn-tip:hover {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: var(--accent-amber);
+    color: #ffffff !important;
+  }
+
+  /* 検索バー */
+  .search-wrapper {
     position: relative;
     display: flex;
     align-items: center;
   }
 
   .search-input {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 0.4rem 2.2rem 0.4rem 0.8rem;
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 0.75rem;
-    width: 160px;
+    background: rgba(14, 18, 26, 0.85);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 0.45rem 2.2rem 0.45rem 0.85rem;
+    font-family: var(--font-jp);
+    font-size: 0.8rem;
+    width: 170px;
     outline: none;
-    transition: border-color 0.2s, width 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .search-input:focus {
-    border-color: var(--accent);
-    width: 200px;
+    width: 220px;
+    border-color: var(--accent-crimson);
+    background: rgba(20, 26, 38, 0.95);
+    box-shadow: 0 0 14px var(--accent-crimson-glow);
   }
 
-  .search-icon {
-    position: absolute;
-    right: 0.6rem;
+  .search-input::placeholder {
     color: var(--text-dim);
-    font-size: 0.75rem;
+  }
+
+  .search-icon-btn {
+    position: absolute;
+    right: 0.7rem;
+    color: var(--text-dim);
+    font-size: 0.8rem;
     pointer-events: none;
   }
 
-  /* ── ヒーローバナー ── */
-  .hero {
+  /* ── ヒーローセクション ── */
+  .hero-section {
+    position: relative;
+    padding: 4rem 1.5rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 46, 91, 0.1);
+    border: 1px solid rgba(255, 46, 91, 0.3);
+    border-radius: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: #ff859d;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent-crimson);
+    box-shadow: 0 0 8px var(--accent-crimson);
+    animation: pulseGlow 2s infinite ease-in-out;
+  }
+
+  .hero-title-main {
+    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+  }
+
+  .hero-title-main span.glow {
+    background: linear-gradient(135deg, #ff4d79, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-desc-text {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.9;
+    max-width: 580px;
+    border-left: 2px solid rgba(255, 46, 91, 0.4);
+    padding-left: 1.2rem;
+  }
+
+  /* ヒーロービジュアル */
+  .hero-visual-card {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    border-radius: 16px;
+    padding: 6px;
+    background: linear-gradient(135deg, rgba(255, 46, 91, 0.3), rgba(245, 158, 11, 0.2));
+    box-shadow: 0 0 30px rgba(255, 46, 91, 0.15);
+  }
+
+  .hero-visual-inner {
     width: 100%;
-    background: var(--bg2);
-    border-bottom: 1px solid var(--border);
+    height: 100%;
+    border-radius: 12px;
+    background: #000;
     overflow: hidden;
     position: relative;
   }
 
-  .hero-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 2rem 3rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 3rem;
+  .hero-visual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9) contrast(1.1);
+    transition: transform 0.5s ease;
   }
 
-  .hero-text {}
+  .hero-visual-card:hover .hero-visual-img {
+    transform: scale(1.06);
+  }
 
-  .hero-label {
-    font-family: 'DM Mono', monospace;
+  .hero-specimen-badge {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: var(--bg-surface);
+    border: 1px solid var(--accent-crimson);
+    color: var(--accent-crimson);
+    padding: 0.35rem 0.8rem;
+    border-radius: 8px;
+    font-family: var(--font-mono);
     font-size: 0.68rem;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 10px var(--accent-crimson-glow);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  /* ── タブナビゲーション ── */
+  .tabs-container {
+    max-width: 1200px;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .tab-pill-group {
+    display: inline-flex;
+    background: rgba(14, 18, 26, 0.9);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+  }
+
+  .tab-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-jp);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.55rem 1.3rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.25s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
 
-  .hero-label::before {
-    content: '';
-    width: 24px;
-    height: 1px;
-    background: var(--accent);
+  .tab-btn:hover {
+    color: #ffffff;
   }
 
-  .hero-title {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: clamp(2.2rem, 5vw, 3.6rem);
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--text-bright);
-    letter-spacing: 0.08em;
-    margin-bottom: 1.2rem;
+  .tab-btn.active {
+    background: linear-gradient(135deg, rgba(255, 46, 91, 0.25), rgba(255, 46, 91, 0.15));
+    border: 1px solid rgba(255, 46, 91, 0.5);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 46, 91, 0.2);
   }
 
-  .hero-title .kanji-accent {
-    color: var(--accent);
-    font-style: italic;
+  .tab-count-badge {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
   }
 
-  .hero-desc {
-    font-size: 0.85rem;
-    line-height: 1.9;
-    color: var(--text-dim);
-    max-width: 500px;
-    border-left: 2px solid var(--border);
-    padding-left: 1rem;
+  .tab-btn.active .tab-count-badge {
+    background: var(--accent-crimson);
+    color: #ffffff;
   }
 
-  .hero-image {
-    position: relative;
-  }
-
-  .hero-image img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border: 1px solid var(--border);
-    filter: sepia(0.4) brightness(0.8);
-    display: block;
-  }
-
-  .hero-image-frame {
-    position: absolute;
-    inset: -8px;
-    border: 1px dashed rgba(184,134,11,0.25);
-    pointer-events: none;
-  }
-
-  .hero-stamp {
-    position: absolute;
-    bottom: -12px;
-    right: -12px;
-    width: 70px;
-    height: 70px;
-    border: 2px solid var(--red);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(-15deg);
-    background: var(--bg2);
-    color: var(--red);
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-align: center;
-    line-height: 1.4;
-    box-shadow: inset 0 0 0 3px rgba(139,32,32,0.12);
-  }
-
-  /* ── タブナビ ── */
-  .page-tabs {
-    max-width: 1100px;
-    margin: 2.5rem auto 0;
-    padding: 0 2rem;
-    display: flex;
-    gap: 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .tab {
-    padding: 0.7rem 1.4rem;
-    font-family: 'DM Mono', monospace;
+  .search-status-bar {
+    font-family: var(--font-mono);
     font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
-    transition: all 0.2s;
-    background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    text-transform: uppercase;
+    color: var(--accent-cyan);
+    display: none;
+    align-items: center;
+    gap: 0.4rem;
   }
 
-  .tab.active {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
-  }
-
-  .tab:hover { color: var(--text-bright); }
-
-  /* ── レイアウト ── */
-  .layout {
-    max-width: 1100px;
+  /* ── メインレイアウト ── */
+  .layout-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 1.5rem 5rem;
     display: grid;
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: 1fr 310px;
     gap: 3rem;
     align-items: start;
   }
 
-  /* ── メイン記事一覧 ── */
-  .section-header {
+  /* セクションヘッダー */
+  .section-headline {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.6rem;
     padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-subtle);
   }
 
-  .section-title {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    color: var(--text-dim);
+  .section-title-text {
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #ffffff;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     gap: 0.6rem;
   }
 
-  .section-title::before {
-    content: '■';
-    font-size: 0.5rem;
-    color: var(--accent);
+  .section-title-text::before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    background: var(--accent-crimson);
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--accent-crimson);
   }
 
-  .see-all {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
+  .section-meta-info {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
     color: var(--text-dim);
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    transition: color 0.2s;
   }
 
-  .see-all:hover { color: var(--accent); }
-
-  /* ── 図鑑カード（fake一覧） ── */
-  .zukan-grid {
+  /* ── 標本図鑑カード（Fake Grid） ── */
+  .specimen-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
   }
 
-  .zukan-card {
-    background: var(--paper);
-    border: 1px solid var(--border);
-    position: relative;
-    cursor: pointer;
-    transition: border-color 0.2s, transform 0.2s;
+  .specimen-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeIn 0.4s ease both;
+  }
+
+  .specimen-card:hover {
+    transform: translateY(-4px);
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-crimson-glow);
+  }
+
+  .specimen-card-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #07090e;
     overflow: hidden;
   }
 
-  .zukan-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
+  .specimen-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) contrast(1.05);
+    transition: transform 0.4s ease, filter 0.4s ease;
   }
 
-  .zukan-card::before {
-    content: attr(data-num);
+  .specimen-card:hover .specimen-card-img {
+    transform: scale(1.04);
+    filter: brightness(1) contrast(1.1);
+  }
+
+  .specimen-img-fallback {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #0f141f;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .specimen-number-tag {
     position: absolute;
-    top: 0.5rem;
-    left: 0.6rem;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--accent);
+    top: 0.65rem;
+    left: 0.65rem;
+    background: rgba(7, 9, 14, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 46, 91, 0.4);
+    color: #ffffff;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
     letter-spacing: 0.05em;
     z-index: 2;
-    background: rgba(14,12,10,0.7);
-    padding: 0.1rem 0.3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   }
 
-  .zukan-card-img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    display: block;
-    filter: sepia(0.5) brightness(0.7) contrast(1.1);
-    transition: filter 0.3s;
-  }
-
-  .zukan-card:hover .zukan-card-img {
-    filter: sepia(0.2) brightness(0.85) contrast(1.05);
-  }
-
-  .zukan-card-img-placeholder {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: linear-gradient(135deg, #1e1a16, #2a2420);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-dim);
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-  }
-
-  .zukan-card-body {
-    padding: 0.9rem;
-  }
-
-  .zukan-card-title {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-bright);
-    line-height: 1.5;
-    margin-bottom: 0.4rem;
-    letter-spacing: 0.02em;
-  }
-
-  .zukan-card-excerpt {
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    line-height: 1.7;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .zukan-card-meta {
-    padding: 0.5rem 0.9rem 0.7rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-
-  .card-tag {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--accent);
-    letter-spacing: 0.08em;
-  }
-
-  .card-date {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--text-dim);
-  }
-
-  /* ── 分類バッジ ── */
-  .classification {
-    display: inline-flex;
-    gap: 0.3rem;
-    flex-wrap: wrap;
-    margin-top: 0.4rem;
-  }
-
-  .badge {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.58rem;
-    padding: 0.15rem 0.4rem;
-    border: 1px solid rgba(184,134,11,0.3);
-    color: var(--text-dim);
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-  }
-
-  /* ── 記事一覧（ブログ） ── */
-  .blog-list {
+  .specimen-card-body {
+    padding: 1.1rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    flex-grow: 1;
   }
 
-  .blog-entry {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-    text-decoration: none;
-    transition: opacity 0.2s;
-  }
-
-  .blog-entry:last-child { border-bottom: none; }
-  .blog-entry:hover { opacity: 0.85; }
-
-  .blog-entry-img {
-    width: 90px;
-    height: 65px;
-    object-fit: cover;
-    filter: sepia(0.4) brightness(0.75);
-    flex-shrink: 0;
-  }
-
-  .blog-entry-img-placeholder {
-    width: 90px;
-    height: 65px;
-    background: #1e1a16;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-dim);
-    font-size: 0.6rem;
-    font-family: 'DM Mono', monospace;
-    flex-shrink: 0;
-  }
-
-  .blog-entry-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    min-width: 0;
-  }
-
-  .blog-entry-cat {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    text-transform: uppercase;
-  }
-
-  .blog-entry-title {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--text-bright);
-    line-height: 1.55;
-    margin-bottom: 0.3rem;
-    letter-spacing: 0.02em;
-  }
-
-  .blog-entry-excerpt {
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    line-height: 1.7;
+  .specimen-card-title {
+    font-family: var(--font-jp);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.45;
+    margin-bottom: 0.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  .blog-entry-meta {
+  .specimen-card-excerpt {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  .specimen-card-footer {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+  }
+
+  .specimen-tag {
+    color: var(--accent-amber);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .specimen-tag::before {
+    content: '◆';
+    font-size: 0.55rem;
+  }
+
+  .specimen-date {
+    color: var(--text-dim);
+  }
+
+  /* ── 観察記録リスト（Blog List） ── */
+  .report-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .report-entry {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeIn 0.4s ease both;
+  }
+
+  .report-entry:hover {
+    transform: translateX(4px);
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px var(--accent-crimson-glow);
+  }
+
+  .report-entry-thumb-wrap {
+    width: 140px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #07090e;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .report-entry-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) contrast(1.05);
+    transition: transform 0.4s ease;
+  }
+
+  .report-entry:hover .report-entry-img {
+    transform: scale(1.06);
+    filter: brightness(1);
+  }
+
+  .report-entry-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .report-category {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent-crimson);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .report-title {
+    font-family: var(--font-jp);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .report-excerpt {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+  }
+
+  .report-meta {
+    margin-top: auto;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    margin-top: 0.5rem;
-  }
-
-  .meta-author {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
     color: var(--text-dim);
   }
 
-  .meta-sep {
-    color: var(--border);
-    font-size: 0.6rem;
-  }
-
-  .meta-date {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--text-dim);
-  }
-
-  .meta-link {
+  .report-read-more {
     margin-left: auto;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--accent);
-    opacity: 0;
-    transition: opacity 0.2s;
-    white-space: nowrap;
+    color: var(--accent-crimson);
+    font-weight: 700;
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
   }
 
-  .blog-entry:hover .meta-link {
+  .report-entry:hover .report-read-more {
     opacity: 1;
+    transform: translateX(3px);
+  }
+
+  /* ── ページネーション ── */
+  .pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .page-nav-btn {
+    height: 38px;
+    min-width: 38px;
+    padding: 0 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .page-nav-btn:hover {
+    border-color: var(--accent-crimson);
+    color: #ffffff;
+    background: rgba(255, 46, 91, 0.1);
+  }
+
+  .page-nav-btn.active {
+    background: linear-gradient(135deg, var(--accent-crimson), #d91b45);
+    border-color: var(--accent-crimson);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 0 14px var(--accent-crimson-glow);
+  }
+
+  .page-ellipsis {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    padding: 0 0.3rem;
   }
 
   /* ── サイドバー ── */
-  .sidebar {
+  .sidebar-column {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.8rem;
   }
 
-  .sidebar-widget {
-    background: var(--paper);
-    border: 1px solid var(--border);
+  .sidebar-box {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
     padding: 1.4rem;
     position: relative;
   }
 
-  .widget-title {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
-    color: var(--accent);
+  .sidebar-title {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--accent-amber);
     text-transform: uppercase;
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.7rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* 図鑑カード（特集） */
-  .featured-card {
-    text-decoration: none;
-    display: block;
-  }
-
-  .featured-img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    display: block;
-    filter: sepia(0.6) brightness(0.65) contrast(1.15);
-    margin-bottom: 1rem;
-    transition: filter 0.3s;
-  }
-
-  .featured-card:hover .featured-img {
-    filter: sepia(0.2) brightness(0.8);
-  }
-
-  .featured-title {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-bright);
-    line-height: 1.55;
-    margin-bottom: 0.6rem;
-  }
-
-  .featured-tags {
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border-subtle);
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  /* 分析項目リスト */
-  .analysis-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .analysis-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    font-size: 0.78rem;
-    color: var(--text);
-    line-height: 1.6;
-  }
-
-  .analysis-list li::before {
-    content: '◇';
-    color: var(--accent);
-    font-size: 0.6rem;
-    margin-top: 0.25rem;
-    flex-shrink: 0;
-  }
-
-  .analysis-list a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .analysis-list a:hover { color: var(--accent); }
-
-  /* 統計 */
-  .stats-grid {
+  /* 統計ウィジェット */
+  .stats-matrix {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
   }
 
-  .stat-item {
+  .stat-card {
+    background: rgba(14, 18, 26, 0.7);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 0.9rem;
     text-align: center;
-    padding: 0.8rem;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid var(--border);
+    transition: border-color 0.25s;
   }
 
-  .stat-num {
-    font-family: 'DM Mono', monospace;
+  .stat-card:hover {
+    border-color: rgba(255, 46, 91, 0.3);
+  }
+
+  .stat-val {
+    font-family: var(--font-en);
     font-size: 1.6rem;
-    color: var(--accent);
+    font-weight: 700;
+    color: #ffffff;
     line-height: 1;
-    display: block;
     margin-bottom: 0.3rem;
+    display: block;
+    background: linear-gradient(135deg, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  .stat-label {
-    font-size: 0.65rem;
+  .stat-card:first-child .stat-val {
+    background: linear-gradient(135deg, #ff6b8b, #ff2e5b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .stat-lbl {
+    font-size: 0.68rem;
     color: var(--text-dim);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   }
 
-  /* 支援ボタン */
-  .tip-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    width: 100%;
-    padding: 0.8rem;
-    background: linear-gradient(135deg, rgba(139,69,19,0.2), rgba(184,134,11,0.1));
-    border: 1px solid var(--accent2);
-    color: var(--accent);
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    transition: all 0.2s;
+  /* 特集ウィジェット */
+  .featured-link {
     text-decoration: none;
+    display: block;
   }
 
-  .tip-btn:hover {
-    background: linear-gradient(135deg, rgba(139,69,19,0.35), rgba(184,134,11,0.2));
-    box-shadow: 0 0 12px rgba(184,134,11,0.1);
+  .featured-img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.9rem;
+    background: #000;
+    border: 1px solid var(--border-subtle);
   }
 
-  /* ── ページネーション ── */
-  .pagination {
+  .featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9);
+    transition: transform 0.4s ease;
+  }
+
+  .featured-link:hover .featured-img {
+    transform: scale(1.05);
+  }
+
+  .featured-heading {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+    transition: color 0.2s;
+  }
+
+  .featured-link:hover .featured-heading {
+    color: var(--accent-crimson);
+  }
+
+  .badge-row {
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 0.35rem;
   }
 
-  .page-btn {
-    width: 32px;
-    height: 32px;
+  .micro-badge {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    padding: 0.18rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+
+  /* 類型ナビ */
+  .type-nav-list {
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border);
-    color: var(--text-dim);
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    background: none;
+    flex-direction: column;
+    gap: 0.45rem;
   }
 
-  .page-btn:hover, .page-btn.active {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-
-  .page-btn.active {
-    background: rgba(184,134,11,0.1);
-  }
-
-  /* ── フッター ── */
-  footer {
-    margin-top: 4rem;
-    border-top: 1px solid var(--border);
-    background: var(--bg2);
-  }
-
-  .footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 2rem;
+  .type-nav-item a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(14, 18, 26, 0.6);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
   }
 
-  .footer-copy {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--text-dim);
-    letter-spacing: 0.05em;
+  .type-nav-item a:hover {
+    background: rgba(255, 46, 91, 0.1);
+    border-color: rgba(255, 46, 91, 0.4);
+    color: #ffffff;
+    transform: translateX(3px);
   }
 
-  .footer-tag {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    color: var(--text-dim);
-    letter-spacing: 0.1em;
-    opacity: 0.5;
-    text-transform: uppercase;
+  .type-nav-item a span.bullet {
+    color: var(--accent-amber);
+    margin-right: 0.5rem;
   }
 
-  /* ── タブコンテンツ表示制御 ── */
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
-
-  /* ── アニメーション ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(14px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-inner       { animation: fadeUp 0.6s ease both; }
-  .zukan-card       { animation: fadeUp 0.5s ease both; }
-  .zukan-card:nth-child(1) { animation-delay: 0.05s; }
-  .zukan-card:nth-child(2) { animation-delay: 0.10s; }
-  .zukan-card:nth-child(3) { animation-delay: 0.15s; }
-  .zukan-card:nth-child(4) { animation-delay: 0.20s; }
-  .zukan-card:nth-child(5) { animation-delay: 0.25s; }
-  .zukan-card:nth-child(6) { animation-delay: 0.30s; }
-
-  .blog-entry       { animation: fadeUp 0.5s ease both; }
-  .blog-entry:nth-child(1) { animation-delay: 0.05s; }
-  .blog-entry:nth-child(2) { animation-delay: 0.1s; }
-  .blog-entry:nth-child(3) { animation-delay: 0.15s; }
-  .blog-entry:nth-child(4) { animation-delay: 0.2s; }
-
-  /* ── 装飾線 ── */
-  .decor-line {
+  /* 支援ウィジェット */
+  .tip-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border), var(--accent), var(--border), transparent);
-    margin: 0.5rem 0 1.5rem;
-    opacity: 0.6;
+    padding: 0.85rem;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(255, 46, 91, 0.2));
+    border: 1px solid var(--accent-amber);
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.86rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    box-shadow: 0 0 16px var(--accent-amber-glow);
+    transition: all 0.3s ease;
   }
 
-  /* ── モバイル対応 ── */
-  @media (max-width: 768px) {
-    .layout { grid-template-columns: 1fr; }
-    .zukan-grid { grid-template-columns: 1fr; }
-    .hero-inner { grid-template-columns: 1fr; }
-    .hero-image { display: none; }
+  .tip-cta-btn:hover {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.35), rgba(255, 46, 91, 0.35));
+    box-shadow: 0 0 24px rgba(245, 158, 11, 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* ── フッター ── */
+  .site-footer {
+    border-top: 1px solid var(--border-subtle);
+    background: rgba(7, 9, 14, 0.95);
+    padding: 2.5rem 1.5rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-dim);
+  }
+
+  .footer-system-text {
+    color: var(--accent-crimson);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── パネル切り替え ── */
+  .tab-panel {
+    display: none;
+  }
+
+  .tab-panel.active {
+    display: block;
+  }
+
+  /* ── 検索なしメッセージ ── */
+  .no-results {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background: var(--bg-card);
+    border: 1px dashed var(--border-subtle);
+    border-radius: 12px;
+  }
+
+  /* ── レスポンシブ対応 ── */
+  @media (max-width: 960px) {
+    .layout-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .hero-visual-card {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
     .header-inner {
-      padding: 0.75rem 1rem;
       height: auto;
-      display: block;
-    }
-    .site-logo { margin-bottom: 0.65rem; }
-    nav {
+      padding: 0.85rem 1rem;
+      flex-direction: column;
+      align-items: stretch;
       gap: 0.8rem;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 0.2rem;
     }
-    nav a, .nav-special { flex: 0 0 auto; }
-    .search-bar { flex: 0 0 140px; min-width: 140px; }
-    .search-input { width: 100%; }
-    .search-input:focus { width: 100%; }
-    nav a { font-size: 0.72rem; }
-    .site-title { font-size: 0.95rem; }
-    .stats-grid { grid-template-columns: 1fr 1fr; }
-    .layout { padding: 1.5rem 1rem; }
-    .page-tabs { padding: 0 1rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .tab { white-space: nowrap; flex: 0 0 auto; }
+    .nav-group {
+      justify-content: space-between;
+      overflow-x: auto;
+      padding-bottom: 0.3rem;
+    }
+    .search-input {
+      width: 100%;
+    }
+    .search-input:focus {
+      width: 100%;
+    }
+    .specimen-grid {
+      grid-template-columns: 1fr;
+    }
+    .report-entry {
+      grid-template-columns: 100px 1fr;
+      gap: 0.9rem;
+      padding: 0.9rem;
+    }
+    .report-entry-thumb-wrap {
+      width: 100px;
+      height: 80px;
+    }
+    .hero-section {
+      padding: 2.5rem 1rem 2rem;
+    }
+    .layout-container {
+      padding: 1.8rem 1rem 4rem;
+    }
   }
 
-  /* ── スクロールバー ── */
-  ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--accent2); }
+  /* スクロールバー */
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg-base); }
+  ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent-crimson); }
 </style>
 </head>
 <body>
 
-<!-- ヘッダー -->
+<!-- ── ヘッダー ── -->
 <header class="site-header">
   <div class="header-inner">
     <a class="site-logo" href="#">
-      <div class="logo-mark">偽</div>
-      <span class="site-title">偽物<span>図鑑</span></span>
-    </a>
-    <nav>
-      <a href="http://zukaneditor.s323.xrea.com/analysis-of-that-guys-personality-character-and-lifestyle-for-account-encyclopedia/" class="nav-special"  target="blank">◆ 奴の人格分析</a>
-      <a href="https://ofuse.me/26b2878f" target="blank">投げ銭</a>
-      <div class="search-bar">
-        <input class="search-input" type="text" placeholder="検索…">
-        <span class="search-icon">🔍</span>
+      <div class="logo-symbol">偽</div>
+      <div class="logo-text-group">
+        <div class="site-title">偽物<span class="accent-text">図鑑</span></div>
+        <div class="site-subtitle">Observation Archive</div>
       </div>
-    </nav>
+    </a>
+    <div class="nav-group">
+      <a href="http://zukaneditor.s323.xrea.com/analysis-of-that-guys-personality-character-and-lifestyle-for-account-encyclopedia/" class="nav-link nav-btn-highlight" target="_blank" rel="noopener">◆ 奴の人格分析</a>
+      <a href="https://ofuse.me/26b2878f" class="nav-link nav-btn-tip" target="_blank" rel="noopener">投げ銭</a>
+      <div class="search-wrapper">
+        <input class="search-input" id="searchInput" type="text" placeholder="標本・記事を検索…">
+        <span class="search-icon-btn">🔍</span>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ヒーロー -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <p class="hero-label">観察記録データベース</p>
-      <h1 class="hero-title">偽物<br><span class="kanji-accent">図鑑</span></h1>
-      <p class="hero-desc">
+<!-- ── ヒーロー ── -->
+<section class="hero-section">
+  <div class="hero-grid">
+    <div class="hero-text-col">
+      <div class="hero-status-pill">
+        <span class="status-dot"></span>
+        <span>SPECIMEN DATABASE // ACTIVE</span>
+      </div>
+      <h1 class="hero-title-main">
+        偽物<span class="glow">図鑑</span>
+      </h1>
+      <p class="hero-desc-text">
         ネット上に存在する「偽りのアカウント」「仮面の人格」を分類・記録する観察図鑑。
-        言語特徴・行動パターン・心理的背景を冷静に分析する。
+        言語特徴・行動パターン・心理的背景を冷徹な視座から記録・分析する。
       </p>
     </div>
-    <div class="hero-image">
-      <div class="hero-image-frame"></div>
-      <img
-        src="https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/nosemono.jpg"
-        alt="偽物図鑑"
-        class="featured-img"
-        style="width:180px;height:180px;aspect-ratio:1;margin:0;"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      >
-      <div style="display:none;width:180px;height:180px;background:#1e1a16;align-items:center;justify-content:center;color:var(--text-dim);font-family:'DM Mono',monospace;font-size:0.7rem;">SPECIMEN</div>
-      <div class="hero-stamp">偽物<br>観察中</div>
+    <div class="hero-visual-card">
+      <div class="hero-visual-inner">
+        <img
+          src="https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/nosemono.jpg"
+          alt="偽物図鑑 メインビジュアル"
+          class="hero-visual-img"
+          onerror="this.style.display='none';"
+        >
+      </div>
+      <div class="hero-specimen-badge">
+        <span>SPECIMEN // 84</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- タブ -->
-<div class="page-tabs">
-  <button class="tab" onclick="switchTab('fake')">図鑑アーカイブ</button>
-  <button class="tab active" onclick="switchTab('blog')">観察記録</button>
+<!-- ── タブ ── -->
+<div class="tabs-container">
+  <div class="tab-pill-group">
+    <button class="tab-btn active" id="tabBtnFake" onclick="switchTab('fake')">
+      <span>図鑑アーカイブ</span>
+      <span class="tab-count-badge" id="fakeCountBadge">72</span>
+    </button>
+    <button class="tab-btn" id="tabBtnBlog" onclick="switchTab('blog')">
+      <span>観察記録</span>
+      <span class="tab-count-badge" id="blogCountBadge">6</span>
+    </button>
+  </div>
+  <div class="search-status-bar" id="searchStatusBar">
+    <span>FILTERED: <strong id="searchResultCount">0</strong> ITEMS</span>
+  </div>
 </div>
 
-<!-- メインレイアウト -->
-<div class="layout">
+<!-- ── メインレイアウト ── -->
+<div class="layout-container">
 
-  <!-- メインカラム -->
+  <!-- メインコンテンツ -->
   <main>
 
-    <!-- 図鑑アーカイブタブ -->
-    <div class="tab-panel" id="panel-fake">
-      <div class="section-header">
-        <span class="section-title">アーカイブ — fake</span>
-        <a href="#" class="see-all">全件表示 →</a>
+    <!-- 図鑑アーカイブパネル -->
+    <div class="tab-panel active" id="panel-fake">
+      <div class="section-headline">
+        <div class="section-title-text">標本アーカイブ — fake</div>
+        <div class="section-meta-info" id="specimenPageMeta">PAGE 1 OF 8</div>
       </div>
-      <div class="decor-line"></div>
-      <div class="zukan-grid" id="fakeGrid">
+      
+      <div class="specimen-grid" id="fakeGrid">
         <!-- JS生成 -->
       </div>
-      <div class="pagination" id="fakePagination">
+
+      <div class="pagination-container" id="fakePagination">
+        <!-- JS生成 -->
       </div>
     </div>
 
-    <!-- 観察記録タブ -->
-    <div class="tab-panel active" id="panel-blog">
-      <div class="section-header">
-        <span class="section-title">観察記録 — 最新</span>
-        <a href="#" class="see-all">全件表示 →</a>
+    <!-- 観察記録パネル -->
+    <div class="tab-panel" id="panel-blog">
+      <div class="section-headline">
+        <div class="section-title-text">深層観察記録 — Report</div>
+        <div class="section-meta-info">6 ARCHIVES</div>
       </div>
-      <div class="decor-line"></div>
-      <div class="blog-list" id="blogList">
+
+      <div class="report-list" id="blogList">
         <!-- JS生成 -->
       </div>
     </div>
@@ -1047,90 +1253,107 @@
   </main>
 
   <!-- サイドバー -->
-  <aside class="sidebar">
+  <aside class="sidebar-column">
 
-    <!-- 特集 -->
-    <div class="sidebar-widget">
-      <div class="widget-title">Featured</div>
-      <a href="#" class="featured-card">
-        <img
-          src="https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/Gemini_Generated_Image_wyfn3xwyfn3xwyfn.png"
-          alt="偽物図鑑"
-          class="featured-img"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
-        <div style="display:none;width:100%;aspect-ratio:1;background:#1e1a16;align-items:center;justify-content:center;color:var(--text-dim);font-family:'DM Mono',monospace;font-size:0.7rem;margin-bottom:1rem;">ZUKAN</div>
-        <div class="featured-title">偽物図鑑 — アカウント観察記録データベース</div>
-        <div class="featured-tags">
-          <span class="badge">分類</span>
-          <span class="badge">言語特徴</span>
-          <span class="badge">行動パターン</span>
+    <!-- 統計ウィジェット -->
+    <div class="sidebar-box">
+      <div class="sidebar-title">
+        <span>Statistics</span>
+        <span>// SYSTEM</span>
+      </div>
+      <div class="stats-matrix">
+        <div class="stat-card">
+          <span class="stat-val" id="statSpecimens">84</span>
+          <span class="stat-lbl">最新標本</span>
         </div>
-      </a>
-    </div>
-
-    <!-- 統計 -->
-    <div class="sidebar-widget">
-      <div class="widget-title">Statistics</div>
-      <div class="stats-grid">
-        <div class="stat-item">
-          <span class="stat-num" id="statCount">83</span>
-          <span class="stat-label">標本数</span>
+        <div class="stat-card">
+          <span class="stat-val" id="statArchives">72</span>
+          <span class="stat-lbl">収録標本数</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-num">9</span>
-          <span class="stat-label">ページ</span>
+        <div class="stat-card">
+          <span class="stat-val">6</span>
+          <span class="stat-lbl">深層観察記録</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-num">10</span>
-          <span class="stat-label">観察記録</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">∞</span>
-          <span class="stat-label">類型</span>
+        <div class="stat-card">
+          <span class="stat-val">9</span>
+          <span class="stat-lbl">類型分類</span>
         </div>
       </div>
     </div>
 
-    <!-- 分析メニュー -->
-    <div class="sidebar-widget">
-      <div class="widget-title">類型ナビ</div>
-      <ul class="analysis-list">
-        <li><a href="http://zukaneditor.s323.xrea.com/fake/page/9/" target="blank">類型 No.9</a></li>
-        <li><a href="http://zukaneditor.s323.xrea.com/fake/page/8/" target="blank">類型 No.8</a></li>
-        <li><a href="http://zukaneditor.s323.xrea.com/fake/page/7/" target="blank">類型 No.7</a></li>
-        <li><a href="http://zukaneditor.s323.xrea.com/fake/page/6/" target="blank">類型 No.6</a></li>
-        <li><a href="http://zukaneditor.s323.xrea.com/fake/page/5/" target="blank">類型 No.5</a></li>
-        <li><a href="http://zukaneditor.s323.xrea.com/fake/page/4/" target="blank">類型 No.4</a></li>
-        <li><a href="http://zukaneditor.s323.xrea.com/fake/page/3/" target="blank">類型 No.3</a></li>
-        <li><a href="http://zukaneditor.s323.xrea.com/analysis-of-that-guys-personality-character-and-lifestyle-for-account-encyclopedia/" target="blank">類型 No.2</a></li>
-        <li><a href="http://zukaneditor.s323.xrea.com/fake/page/1/" target="blank">類型 No.1</a></li>
+    <!-- 特集ウィジェット -->
+    <div class="sidebar-box">
+      <div class="sidebar-title">
+        <span>Featured</span>
+        <span>// SPECIMEN</span>
+      </div>
+      <a href="http://zukaneditor.s323.xrea.com/analysis-of-that-guys-personality-character-and-lifestyle-for-account-encyclopedia/" target="_blank" rel="noopener" class="featured-link">
+        <div class="featured-img-wrap">
+          <img
+            src="https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/Gemini_Generated_Image_wyfn3xwyfn3xwyfn.png"
+            alt="偽物図鑑 特集"
+            class="featured-img"
+            onerror="this.style.display='none';"
+          >
+        </div>
+        <div class="featured-heading">偽物図鑑 — アカウント観察記録データベース</div>
+        <div class="badge-row">
+          <span class="micro-badge">類型分類</span>
+          <span class="micro-badge">言語特徴</span>
+          <span class="micro-badge">行動パターン</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- 類型ナビウィジェット -->
+    <div class="sidebar-box">
+      <div class="sidebar-title">
+        <span>Types Navigation</span>
+        <span>// INDEX</span>
+      </div>
+      <ul class="type-nav-list">
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/fake/page/9/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.9</span><span>→</span></a></li>
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/fake/page/8/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.8</span><span>→</span></a></li>
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/fake/page/7/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.7</span><span>→</span></a></li>
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/fake/page/6/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.6</span><span>→</span></a></li>
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/fake/page/5/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.5</span><span>→</span></a></li>
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/fake/page/4/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.4</span><span>→</span></a></li>
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/fake/page/3/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.3</span><span>→</span></a></li>
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/analysis-of-that-guys-personality-character-and-lifestyle-for-account-encyclopedia/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.2</span><span>→</span></a></li>
+        <li class="type-nav-item"><a href="http://zukaneditor.s323.xrea.com/fake/page/1/" target="_blank" rel="noopener"><span><span class="bullet">◇</span>類型 No.1</span><span>→</span></a></li>
       </ul>
     </div>
 
-    <!-- 支援 -->
-    <div class="sidebar-widget">
-      <div class="widget-title">Support</div>
-      <p style="font-size:0.75rem;color:var(--text-dim);line-height:1.7;margin-bottom:1rem;">
-        継続的な観察・記録活動への支援を歓迎します。
+    <!-- 支援ウィジェット -->
+    <div class="sidebar-box">
+      <div class="sidebar-title">
+        <span>Support</span>
+        <span>// DONATION</span>
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);line-height:1.7;margin-bottom:1.1rem;">
+        継続的な観察・記録・アーカイブ維持活動への支援を歓迎します。
       </p>
-      <a href="http://zukaneditor.s323.xrea.com/tip/" target="_blank" rel="noopener">投げ銭</a>
+      <a href="http://zukaneditor.s323.xrea.com/tip/" target="_blank" rel="noopener" class="tip-cta-btn">
+        <span>投げ銭で支援する</span>
+        <span>⚡</span>
+      </a>
     </div>
 
   </aside>
 </div>
 
-<!-- フッター -->
-<footer>
+<!-- ── フッター ── -->
+<footer class="site-footer">
   <div class="footer-inner">
-    <span class="footer-copy">Copyright © 2026 — 偽物図鑑</span>
-    <span class="footer-tag">Observation Archive System</span>
+    <span>COPYRIGHT © 2026 偽物図鑑 ALL RIGHTS RESERVED.</span>
+    <span class="footer-system-text">OBSERVATION ARCHIVE SYSTEM // VER 2.6</span>
   </div>
 </footer>
 
 <script>
-// ── データ（71件全件） ──────────────────────────────
+// ── 標本図鑑データ（全72件・最新84追加） ──────────────────────────────
 const fakeData = [
+  { num: '84',  title: '84', excerpt: '何かと作らないと死ぬ病気なんですか？（ため息）…', date: '2026.08.31', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/08/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-08-31-20.38.24.png', url: 'http://zukaneditor.s323.xrea.com/fake/84/' },
   { num: '83',  title: '83', excerpt: 'これは小山同様ゴーストライター的な扱いだから入れ…', date: '2026.06.30', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-06-30-17.55.42.png', url: 'http://zukaneditor.s323.xrea.com/fake/83/' },
   { num: '82',  title: '82', excerpt: '要はこういうレベルの人らに絡んでる時点で同類って…', date: '2026.06.30', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-06-30-17.49.51.png', url: 'http://zukaneditor.s323.xrea.com/fake/82/' },
   { num: '81',  title: '81', excerpt: 'あまり強い言葉を使わない方がいいんじゃない、何で…', date: '2026.06.30', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-06-30-9.45.02.png', url: 'http://zukaneditor.s323.xrea.com/fake/81/' },
@@ -1216,6 +1439,7 @@ const fakeData = [
   { num: '①',  title: '①', excerpt: '【分類】 【主な言語特徴】 【行動パター…', date: '2025.12.17', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/siiiiii.png', url: 'http://zukaneditor.s323.xrea.com/fake/%e2%91%a0/' },
 ];
 
+// ── 観察記録ブログデータ（残存6件） ──────────────────────────────
 const blogData = [
   {
     title: '解',
@@ -1265,112 +1489,149 @@ const blogData = [
     url: 'http://zukaneditor.s323.xrea.com/2025/12/29/why/',
     cat: '未分類',
   },
-  {
-    title: '【偽物図鑑：深層分析】怪物の末路 ―― 歪んだ自己愛と肉体の乖離',
-    excerpt: 'これまで分析してきた数多くの人格群は、単なる「遊…',
-    date: '2025年12月23日',
-    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2025/12/23/the-monsters-end/',
-    cat: '未分類',
-  },
-  {
-    title: '架空ペルソナ前提での「事実→物語」加工プロセス',
-    excerpt: 'ここでは「実在の容姿・属性を持たない、…',
-    date: '2025年12月18日',
-    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2025/12/18/persona/',
-    cat: '未分類',
-  },
-  {
-    title: '未統合の聖と俗：『隠された傷』を冷笑へと転換する、ある独裁者の生存戦略',
-    excerpt: '（意味：過去の罪や苦痛を直視出来ず、他…',
-    date: '2025年12月18日',
-    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2025/12/18/madonna-hoa-complex/',
-    cat: '未分類',
-  },
-  {
-    title: '【事実から物語への加工プロセス：4つの工程】',
-    excerpt: '提示されたブログ資料および「奴」の人格分析に基づき…',
-    date: '2025年12月18日',
-    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
-    url: 'http://zukaneditor.s323.xrea.com/2025/12/18/process/',
-    cat: '未分類',
-  },
 ];
 
-// ── ページネーション状態 ──────────────────────────────
+// ── 状態管理 ──────────────────────────────
 const ITEMS_PER_PAGE = 10;
-let currentPage = 1;
-const totalPages = Math.ceil(fakeData.length / ITEMS_PER_PAGE);
+let currentFakePage = 1;
+let currentTab = 'fake';
+let searchQuery = '';
 
-// ── レンダリング ──────────────────────────────
-function renderFake(page) {
-  currentPage = page;
-  const start = (page - 1) * ITEMS_PER_PAGE;
-  const items = fakeData.slice(start, start + ITEMS_PER_PAGE);
+// ── レンダリング: 図鑑アーカイブ ──────────────────────────────
+function getFilteredFakeData() {
+  if (!searchQuery) return fakeData;
+  const q = searchQuery.toLowerCase();
+  return fakeData.filter(item => 
+    item.num.toLowerCase().includes(q) ||
+    item.title.toLowerCase().includes(q) ||
+    item.excerpt.toLowerCase().includes(q) ||
+    item.date.toLowerCase().includes(q)
+  );
+}
+
+function renderFake(page = 1) {
+  currentFakePage = page;
+  const filtered = getFilteredFakeData();
+  const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+  if (currentFakePage > totalPages) currentFakePage = totalPages;
+
+  const start = (currentFakePage - 1) * ITEMS_PER_PAGE;
+  const items = filtered.slice(start, start + ITEMS_PER_PAGE);
   const grid = document.getElementById('fakeGrid');
+
+  document.getElementById('fakeCountBadge').textContent = filtered.length;
+  document.getElementById('specimenPageMeta').textContent = `PAGE ${currentFakePage} OF ${totalPages} (${filtered.length} SPECIMENS)`;
+
+  if (items.length === 0) {
+    grid.innerHTML = `<div class="no-results" style="grid-column: 1 / -1;">該当する標本は見つかりませんでした: "${searchQuery}"</div>`;
+    document.getElementById('fakePagination').innerHTML = '';
+    return;
+  }
+
   grid.innerHTML = items.map(item => `
-    <a class="zukan-card" data-num="No.${item.num}" href="${item.url}" target="_blank" rel="noopener">
-      <img
-        class="zukan-card-img"
-        src="${item.img}"
-        alt="${item.title}"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-      >
-      <div class="zukan-card-img-placeholder" style="display:none;">[ SCREENSHOT ]</div>
-      <div class="zukan-card-body">
-        <div class="zukan-card-title">${item.title}</div>
-        <div class="zukan-card-excerpt">${item.excerpt}</div>
+    <a class="specimen-card" href="${item.url}" target="_blank" rel="noopener">
+      <div class="specimen-card-img-wrap">
+        <span class="specimen-number-tag">No.${item.num}</span>
+        <img
+          class="specimen-card-img"
+          src="${item.img}"
+          alt="Specimen No.${item.title}"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+        <div class="specimen-img-fallback">[ SPECIMEN IMAGE ]</div>
       </div>
-      <div class="zukan-card-meta">
-        <span class="card-tag">fake</span>
-        <span class="card-date">${item.date}</span>
+      <div class="specimen-card-body">
+        <div class="specimen-card-title">${item.title}</div>
+        <div class="specimen-card-excerpt">${item.excerpt}</div>
+        <div class="specimen-card-footer">
+          <span class="specimen-tag">fake</span>
+          <span class="specimen-date">${item.date}</span>
+        </div>
       </div>
     </a>
   `).join('');
-  renderPagination();
+
+  renderFakePagination(totalPages);
 }
 
-function renderPagination() {
+function renderFakePagination(totalPages) {
   const container = document.getElementById('fakePagination');
-  let html = '';
-  if (currentPage > 1) {
-    html += `<button class="page-btn" onclick="renderFake(${currentPage - 1})">← 前へ</button>`;
+  if (totalPages <= 1) {
+    container.innerHTML = '';
+    return;
   }
+
+  let html = '';
+  if (currentFakePage > 1) {
+    html += `<button class="page-nav-btn" onclick="goToFakePage(${currentFakePage - 1})">← PREV</button>`;
+  }
+
   for (let i = 1; i <= totalPages; i++) {
-    if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1) {
-      html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="renderFake(${i})">${i}</button>`;
-    } else if (Math.abs(i - currentPage) === 2) {
-      html += `<span style="color:var(--text-dim);font-family:'DM Mono',monospace;font-size:0.7rem;">…</span>`;
+    if (i === 1 || i === totalPages || Math.abs(i - currentFakePage) <= 1) {
+      html += `<button class="page-nav-btn ${i === currentFakePage ? 'active' : ''}" onclick="goToFakePage(${i})">${i}</button>`;
+    } else if (Math.abs(i - currentFakePage) === 2) {
+      html += `<span class="page-ellipsis">…</span>`;
     }
   }
-  if (currentPage < totalPages) {
-    html += `<button class="page-btn" onclick="renderFake(${currentPage + 1})">次へ →</button>`;
+
+  if (currentFakePage < totalPages) {
+    html += `<button class="page-nav-btn" onclick="goToFakePage(${currentFakePage + 1})">NEXT →</button>`;
   }
+
   container.innerHTML = html;
 }
 
+function goToFakePage(page) {
+  renderFake(page);
+  const panel = document.getElementById('panel-fake');
+  if (panel) {
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// ── レンダリング: 観察記録ブログ ──────────────────────────────
+function getFilteredBlogData() {
+  if (!searchQuery) return blogData;
+  const q = searchQuery.toLowerCase();
+  return blogData.filter(item =>
+    item.title.toLowerCase().includes(q) ||
+    item.excerpt.toLowerCase().includes(q) ||
+    item.date.toLowerCase().includes(q) ||
+    item.cat.toLowerCase().includes(q)
+  );
+}
+
 function renderBlog() {
+  const filtered = getFilteredBlogData();
   const list = document.getElementById('blogList');
-  list.innerHTML = blogData.map(item => `
-    <a class="blog-entry" href="${item.url}" target="_blank" rel="noopener">
-      <img
-        class="blog-entry-img"
-        src="${item.img}"
-        alt="${item.title}"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-      >
-      <div class="blog-entry-img-placeholder" style="display:none;">[IMG]</div>
-      <div class="blog-entry-content">
-        <span class="blog-entry-cat">${item.cat}</span>
-        <div class="blog-entry-title">${item.title}</div>
-        <div class="blog-entry-excerpt">${item.excerpt}</div>
-        <div class="blog-entry-meta">
-          <span class="meta-author">ukaneditor</span>
-          <span class="meta-sep">·</span>
-          <span class="meta-date">${item.date}</span>
-          <span class="meta-link">元記事を読む →</span>
+  document.getElementById('blogCountBadge').textContent = filtered.length;
+
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="no-results">該当する観察記録は見つかりませんでした: "${searchQuery}"</div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(item => `
+    <a class="report-entry" href="${item.url}" target="_blank" rel="noopener">
+      <div class="report-entry-thumb-wrap">
+        <img
+          class="report-entry-img"
+          src="${item.img}"
+          alt="${item.title}"
+          loading="lazy"
+          onerror="this.style.display='none';"
+        >
+      </div>
+      <div class="report-entry-content">
+        <div class="report-category">${item.cat}</div>
+        <div class="report-title">${item.title}</div>
+        <div class="report-excerpt">${item.excerpt}</div>
+        <div class="report-meta">
+          <span>ukaneditor</span>
+          <span>·</span>
+          <span>${item.date}</span>
+          <span class="report-read-more">元記事を読む →</span>
         </div>
       </div>
     </a>
@@ -1378,21 +1639,50 @@ function renderBlog() {
 }
 
 // ── タブ切り替え ──────────────────────────────
-function switchTab(name) {
-  document.querySelectorAll('.tab').forEach((t, i) => {
-    t.classList.toggle('active', (name === 'fake' && i === 0) || (name === 'blog' && i === 1));
-  });
-  document.getElementById('panel-fake').classList.toggle('active', name === 'fake');
-  document.getElementById('panel-blog').classList.toggle('active', name === 'blog');
+function switchTab(tab) {
+  currentTab = tab;
+  const btnFake = document.getElementById('tabBtnFake');
+  const btnBlog = document.getElementById('tabBtnBlog');
+  const panelFake = document.getElementById('panel-fake');
+  const panelBlog = document.getElementById('panel-blog');
+
+  if (tab === 'fake') {
+    btnFake.classList.add('active');
+    btnBlog.classList.remove('active');
+    panelFake.classList.add('active');
+    panelBlog.classList.remove('active');
+  } else {
+    btnBlog.classList.add('active');
+    btnFake.classList.remove('active');
+    panelBlog.classList.add('active');
+    panelFake.classList.remove('active');
+  }
 }
+
+// ── 検索イベント ──────────────────────────────
+const searchInput = document.getElementById('searchInput');
+const searchStatusBar = document.getElementById('searchStatusBar');
+const searchResultCount = document.getElementById('searchResultCount');
+
+searchInput.addEventListener('input', (e) => {
+  searchQuery = e.target.value.trim();
+  
+  if (searchQuery) {
+    searchStatusBar.style.display = 'flex';
+    const fakeMatches = getFilteredFakeData().length;
+    const blogMatches = getFilteredBlogData().length;
+    searchResultCount.textContent = currentTab === 'fake' ? fakeMatches : blogMatches;
+  } else {
+    searchStatusBar.style.display = 'none';
+  }
+
+  renderFake(1);
+  renderBlog();
+});
 
 // ── 初期化 ──────────────────────────────
 renderFake(1);
 renderBlog();
-
-// ── ページネーション（旧コード削除） ──────────────────────────────
 </script>
 </body>
 </html>
-
-<!-- deploy: 2026-06-30T18:00:00+09:00 -->
