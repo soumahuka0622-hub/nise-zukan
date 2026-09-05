@@ -1037,6 +1037,59 @@
     transform: translateY(-2px);
   }
 
+  /* BGMプレイヤー */
+  .bgm-player {
+    background:
+      linear-gradient(135deg, rgba(255, 46, 91, 0.12), transparent 55%),
+      rgba(14, 18, 26, 0.7);
+  }
+
+  .bgm-player-title {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .bgm-player-title::before {
+    content: '♪';
+    color: var(--accent-crimson);
+    font-size: 1.15rem;
+  }
+
+  .bgm-player-description {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+
+  .bgm-player audio {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 0.75rem;
+  }
+
+  .bgm-credit {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    line-height: 1.6;
+  }
+
+  .bgm-credit a {
+    color: var(--accent-amber);
+    text-decoration: none;
+  }
+
+  .bgm-credit a:hover {
+    text-decoration: underline;
+  }
+
   /* ── フッター ── */
   .site-footer {
     border-top: 1px solid var(--border-subtle);
@@ -1255,6 +1308,23 @@
 
   <!-- サイドバー -->
   <aside class="sidebar-column">
+
+    <!-- BGMプレイヤー -->
+    <div class="sidebar-box bgm-player">
+      <div class="sidebar-title">
+        <span>Background Music</span>
+        <span>// BGM</span>
+      </div>
+      <div class="bgm-player-title">シャイニングスター</div>
+      <p class="bgm-player-description">図鑑を眺めながら、魔王魂の楽曲をお楽しみください。</p>
+      <audio controls preload="metadata" aria-label="シャイニングスターを再生">
+        <source src="assets/shining_star.mp3" type="audio/mpeg">
+        お使いのブラウザは音声再生に対応していません。
+      </audio>
+      <p class="bgm-credit">
+        Music by <a href="https://maou.audio/14_shining_star/" target="_blank" rel="noopener">魔王魂「シャイニングスター」</a>
+      </p>
+    </div>
 
     <!-- 統計ウィジェット -->
     <div class="sidebar-box">
