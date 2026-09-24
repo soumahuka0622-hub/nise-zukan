@@ -538,6 +538,15 @@
     color: var(--text-dim);
   }
 
+  .section-meta-info a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+  }
+
+  .section-meta-info a:hover {
+    text-decoration: underline;
+  }
+
   /* ── 標本図鑑カード（Fake Grid） ── */
   .specimen-grid {
     display: grid;
@@ -792,6 +801,17 @@
   .report-entry:hover .report-read-more {
     opacity: 1;
     transform: translateX(3px);
+  }
+
+  .note-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: -0.5rem 0 1.2rem;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
   }
 
   /* ── ページネーション ── */
@@ -1264,6 +1284,10 @@
       <span>観察記録</span>
       <span class="tab-count-badge" id="blogCountBadge">4</span>
     </button>
+    <button class="tab-btn" id="tabBtnNote" onclick="switchTab('note')">
+      <span>三豚界隈</span>
+      <span class="tab-count-badge" id="noteCountBadge">0</span>
+    </button>
   </div>
   <div class="search-status-bar" id="searchStatusBar">
     <span>FILTERED: <strong id="searchResultCount">0</strong> ITEMS</span>
@@ -1300,6 +1324,23 @@
       </div>
 
       <div class="report-list" id="blogList">
+        <!-- JS生成 -->
+      </div>
+    </div>
+
+    <!-- note「三豚界隈」パネル -->
+    <div class="tab-panel" id="panel-note">
+      <div class="section-headline">
+        <div class="section-title-text">三豚界隈 — note</div>
+        <div class="section-meta-info">
+          <a href="https://note.com/hashtag/%E4%B8%89%E8%B1%9A%E7%95%8C%E9%9A%88" target="_blank" rel="noopener">TAG PAGE ↗</a>
+        </div>
+      </div>
+      <div class="note-toolbar">
+        <span id="noteRandomStatus">全記事をランダム表示</span>
+        <button class="page-nav-btn" type="button" onclick="shuffleNoteData()">↻ 再シャッフル</button>
+      </div>
+      <div class="report-list" id="noteList">
         <!-- JS生成 -->
       </div>
     </div>
@@ -1421,6 +1462,7 @@
   </div>
 </footer>
 
+<script src="note-tag-data.js"></script>
 <script>
 // ── 標本図鑑データ（全72件・最新84追加） ──────────────────────────────
 const fakeData = [
@@ -1657,6 +1699,59 @@ function getFilteredBlogData() {
   );
 }
 
+let shuffledNoteData = [...noteTagData];
+
+function shuffleNoteData() {
+  shuffledNoteData = [...noteTagData];
+  for (let i = shuffledNoteData.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledNoteData[i], shuffledNoteData[j]] = [shuffledNoteData[j], shuffledNoteData[i]];
+  }
+  renderNote();
+}
+
+function getFilteredNoteData() {
+  if (!searchQuery) return shuffledNoteData;
+  const q = searchQuery.toLowerCase();
+  return shuffledNoteData.filter(item =>
+    item.title.toLowerCase().includes(q) ||
+    item.excerpt.toLowerCase().includes(q) ||
+    item.date.toLowerCase().includes(q)
+  );
+}
+
+function renderNote() {
+  const filtered = getFilteredNoteData();
+  const list = document.getElementById('noteList');
+  document.getElementById('noteCountBadge').textContent = filtered.length;
+  document.getElementById('noteRandomStatus').textContent =
+    searchQuery ? `${filtered.length}件が検索に一致` : `${filtered.length}件をランダム表示中`;
+
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="no-results">該当する三豚界隈の記事は見つかりませんでした: "${searchQuery}"</div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(item => `
+    <a class="report-entry" href="${item.url}" target="_blank" rel="noopener">
+      <div class="report-entry-thumb-wrap">
+        ${item.img ? `<img class="report-entry-img" src="${item.img}" alt="${item.title}" loading="lazy" onerror="this.style.display='none';">` : ''}
+      </div>
+      <div class="report-entry-content">
+        <div class="report-category">${item.cat}</div>
+        <div class="report-title">${item.title}</div>
+        <div class="report-excerpt">${item.excerpt}</div>
+        <div class="report-meta">
+          <span>note</span>
+          <span>·</span>
+          <span>${item.date}</span>
+          <span class="report-read-more">記事を読む →</span>
+        </div>
+      </div>
+    </a>
+  `).join('');
+}
+
 function renderBlog() {
   const filtered = getFilteredBlogData();
   const list = document.getElementById('blogList');
@@ -1698,19 +1793,32 @@ function switchTab(tab) {
   currentTab = tab;
   const btnFake = document.getElementById('tabBtnFake');
   const btnBlog = document.getElementById('tabBtnBlog');
+  const btnNote = document.getElementById('tabBtnNote');
   const panelFake = document.getElementById('panel-fake');
   const panelBlog = document.getElementById('panel-blog');
+  const panelNote = document.getElementById('panel-note');
 
   if (tab === 'fake') {
     btnFake.classList.add('active');
     btnBlog.classList.remove('active');
+    btnNote.classList.remove('active');
     panelFake.classList.add('active');
     panelBlog.classList.remove('active');
-  } else {
+    panelNote.classList.remove('active');
+  } else if (tab === 'blog') {
     btnBlog.classList.add('active');
     btnFake.classList.remove('active');
+    btnNote.classList.remove('active');
     panelBlog.classList.add('active');
     panelFake.classList.remove('active');
+    panelNote.classList.remove('active');
+  } else {
+    btnNote.classList.add('active');
+    btnFake.classList.remove('active');
+    btnBlog.classList.remove('active');
+    panelNote.classList.add('active');
+    panelFake.classList.remove('active');
+    panelBlog.classList.remove('active');
   }
 }
 
@@ -1726,18 +1834,22 @@ searchInput.addEventListener('input', (e) => {
     searchStatusBar.style.display = 'flex';
     const fakeMatches = getFilteredFakeData().length;
     const blogMatches = getFilteredBlogData().length;
-    searchResultCount.textContent = currentTab === 'fake' ? fakeMatches : blogMatches;
+    const noteMatches = getFilteredNoteData().length;
+    searchResultCount.textContent =
+      currentTab === 'fake' ? fakeMatches : currentTab === 'blog' ? blogMatches : noteMatches;
   } else {
     searchStatusBar.style.display = 'none';
   }
 
   renderFake(1);
   renderBlog();
+  renderNote();
 });
 
 // ── 初期化 ──────────────────────────────
 renderFake(1);
 renderBlog();
+shuffleNoteData();
 </script>
 </body>
 </html>
