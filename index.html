@@ -814,6 +814,11 @@
     font-size: 0.72rem;
   }
 
+  .note-toolbar-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
   /* ── ページネーション ── */
   .pagination-container {
     display: flex;
@@ -1338,7 +1343,10 @@
       </div>
       <div class="note-toolbar">
         <span id="noteRandomStatus">全記事をランダム表示</span>
-        <button class="page-nav-btn" type="button" onclick="shuffleNoteData()">↻ 再シャッフル</button>
+        <div class="note-toolbar-actions">
+          <button class="page-nav-btn" type="button" onclick="loadLatestNoteData()">↻ 記事を更新</button>
+          <button class="page-nav-btn" type="button" onclick="shuffleNoteData()">ランダム順にする</button>
+        </div>
       </div>
       <div class="report-list" id="noteList">
         <!-- JS生成 -->
@@ -1699,15 +1707,54 @@ function getFilteredBlogData() {
   );
 }
 
-let shuffledNoteData = [...noteTagData];
+let availableNoteData = [...noteTagData];
+let shuffledNoteData = [...availableNoteData];
+let noteFeedState = 'loading';
+let noteFeedUpdatedAt = '';
 
 function shuffleNoteData() {
-  shuffledNoteData = [...noteTagData];
+  shuffledNoteData = [...availableNoteData];
   for (let i = shuffledNoteData.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledNoteData[i], shuffledNoteData[j]] = [shuffledNoteData[j], shuffledNoteData[i]];
   }
   renderNote();
+}
+
+async function loadLatestNoteData() {
+  noteFeedState = 'loading';
+  renderNote();
+
+  try {
+    const response = await fetch('/api/note-tag', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`記事の更新に失敗しました (${response.status})`);
+    }
+
+    const result = await response.json();
+    if (!Array.isArray(result.articles) || typeof result.updatedAt !== 'string') {
+      throw new Error('記事データの形式が正しくありません');
+    }
+
+    availableNoteData = result.articles;
+    noteFeedUpdatedAt = result.updatedAt;
+    noteFeedState = 'current';
+    shuffleNoteData();
+  } catch (error) {
+    console.error('三豚界隈の記事を更新できませんでした:', error);
+    noteFeedState = 'stale';
+    renderNote();
+  }
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  })[character]);
 }
 
 function getFilteredNoteData() {
@@ -1724,27 +1771,36 @@ function renderNote() {
   const filtered = getFilteredNoteData();
   const list = document.getElementById('noteList');
   document.getElementById('noteCountBadge').textContent = filtered.length;
-  document.getElementById('noteRandomStatus').textContent =
-    searchQuery ? `${filtered.length}件が検索に一致` : `${filtered.length}件をランダム表示中`;
+  const status = document.getElementById('noteRandomStatus');
+  if (searchQuery) {
+    status.textContent = `${filtered.length}件が検索に一致`;
+  } else if (noteFeedState === 'loading') {
+    status.textContent = 'noteの記事を確認中…';
+  } else if (noteFeedState === 'stale') {
+    status.textContent = `更新できませんでした。保存済みの${availableNoteData.length}件を表示中`;
+  } else {
+    const updatedAt = new Date(noteFeedUpdatedAt).toLocaleString('ja-JP');
+    status.textContent = `${filtered.length}件をランダム表示中 · 更新 ${updatedAt}`;
+  }
 
   if (filtered.length === 0) {
-    list.innerHTML = `<div class="no-results">該当する三豚界隈の記事は見つかりませんでした: "${searchQuery}"</div>`;
+    list.innerHTML = `<div class="no-results">該当する三豚界隈の記事は見つかりませんでした: "${escapeHtml(searchQuery)}"</div>`;
     return;
   }
 
   list.innerHTML = filtered.map(item => `
-    <a class="report-entry" href="${item.url}" target="_blank" rel="noopener">
+    <a class="report-entry" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">
       <div class="report-entry-thumb-wrap">
-        ${item.img ? `<img class="report-entry-img" src="${item.img}" alt="${item.title}" loading="lazy" onerror="this.style.display='none';">` : ''}
+        ${item.img ? `<img class="report-entry-img" src="${escapeHtml(item.img)}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.style.display='none';">` : ''}
       </div>
       <div class="report-entry-content">
-        <div class="report-category">${item.cat}</div>
-        <div class="report-title">${item.title}</div>
-        <div class="report-excerpt">${item.excerpt}</div>
+        <div class="report-category">${escapeHtml(item.cat)}</div>
+        <div class="report-title">${escapeHtml(item.title)}</div>
+        <div class="report-excerpt">${escapeHtml(item.excerpt)}</div>
         <div class="report-meta">
           <span>note</span>
           <span>·</span>
-          <span>${item.date}</span>
+          <span>${escapeHtml(item.date)}</span>
           <span class="report-read-more">記事を読む →</span>
         </div>
       </div>
@@ -1850,6 +1906,7 @@ searchInput.addEventListener('input', (e) => {
 renderFake(1);
 renderBlog();
 shuffleNoteData();
+loadLatestNoteData();
 </script>
 </body>
 </html>
