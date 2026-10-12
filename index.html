@@ -11,6 +11,8 @@
 <meta name="author" content="ukaneditor">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://nise-zukan.vercel.app/">
+<link rel="alternate" hreflang="ja" href="https://nise-zukan.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://nise-zukan.vercel.app/en.html">
 
 <!-- ── OGP (Open Graph) ── -->
 <meta property="og:type" content="website">
@@ -302,6 +304,49 @@
     color: var(--text-dim);
     font-size: 0.8rem;
     pointer-events: none;
+  }
+
+  /* ── 言語切り替えスイッチ ── */
+  .lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(14, 18, 26, 0.85);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 2px 4px;
+    gap: 2px;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+
+  .lang-btn {
+    display: inline-block;
+    padding: 0.24rem 0.55rem;
+    border-radius: 6px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+
+  .lang-btn:hover {
+    color: var(--text-main);
+  }
+
+  .lang-btn.active {
+    background: linear-gradient(135deg, rgba(255, 46, 91, 0.35), rgba(245, 158, 11, 0.25));
+    border: 1px solid rgba(255, 46, 91, 0.5);
+    color: #ffffff;
+    box-shadow: 0 0 10px var(--accent-crimson-glow);
+  }
+
+  .lang-divider {
+    color: var(--text-dim);
+    opacity: 0.4;
+    font-size: 0.7rem;
+    user-select: none;
   }
 
   /* ── ヒーローセクション ── */
@@ -1235,6 +1280,11 @@
       </div>
     </a>
     <div class="nav-group">
+      <div class="lang-switcher" aria-label="言語切り替え / Language Switcher">
+        <span class="lang-btn active">JP</span>
+        <span class="lang-divider">/</span>
+        <a href="en.html" class="lang-btn" title="Switch to English">EN</a>
+      </div>
       <a href="http://zukaneditor.s323.xrea.com/analysis-of-that-guys-personality-character-and-lifestyle-for-account-encyclopedia/" class="nav-link nav-btn-highlight" target="_blank" rel="noopener">◆ 奴の人格分析</a>
       <a href="https://ofuse.me/26b2878f" class="nav-link nav-btn-tip" target="_blank" rel="noopener">投げ銭</a>
       <div class="search-wrapper">
@@ -1272,7 +1322,7 @@
         >
       </div>
       <div class="hero-specimen-badge">
-        <span>SPECIMEN // 84</span>
+        <span>SPECIMEN // 85</span>
       </div>
     </div>
   </div>
@@ -1283,7 +1333,7 @@
   <div class="tab-pill-group">
     <button class="tab-btn active" id="tabBtnFake" onclick="switchTab('fake')">
       <span>図鑑アーカイブ</span>
-      <span class="tab-count-badge" id="fakeCountBadge">72</span>
+      <span class="tab-count-badge" id="fakeCountBadge">73</span>
     </button>
     <button class="tab-btn" id="tabBtnBlog" onclick="switchTab('blog')">
       <span>観察記録</span>
@@ -1383,11 +1433,11 @@
       </div>
       <div class="stats-matrix">
         <div class="stat-card">
-          <span class="stat-val" id="statSpecimens">84</span>
+          <span class="stat-val" id="statSpecimens">85</span>
           <span class="stat-lbl">最新標本</span>
         </div>
         <div class="stat-card">
-          <span class="stat-val" id="statArchives">72</span>
+          <span class="stat-val" id="statArchives">73</span>
           <span class="stat-lbl">収録標本数</span>
         </div>
         <div class="stat-card">
@@ -1472,8 +1522,9 @@
 
 <script src="note-tag-data.js"></script>
 <script>
-// ── 標本図鑑データ（全72件・最新84追加） ──────────────────────────────
+// ── 標本図鑑データ（全73件・最新85追加） ──────────────────────────────
 const fakeData = [
+  { num: '85',  title: '85', excerpt: '（野崎って複垢もあるけど、何でもかんでもアカウント重複しまくって人生半分それに奪われて損してますよね）…', date: '2026.10.12', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/10/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-10-12-17.56.31.png', url: 'http://zukaneditor.s323.xrea.com/2026/10/12/85/' },
   { num: '84',  title: '84', excerpt: '何かと作らないと死ぬ病気なんですか？（ため息）…', date: '2026.08.31', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/08/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-08-31-20.38.24.png', url: 'http://zukaneditor.s323.xrea.com/fake/84/' },
   { num: '83',  title: '83', excerpt: 'これは小山同様ゴーストライター的な扱いだから入れ…', date: '2026.06.30', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-06-30-17.55.42.png', url: 'http://zukaneditor.s323.xrea.com/fake/83/' },
   { num: '82',  title: '82', excerpt: '要はこういうレベルの人らに絡んでる時点で同類って…', date: '2026.06.30', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-06-30-17.49.51.png', url: 'http://zukaneditor.s323.xrea.com/fake/82/' },
