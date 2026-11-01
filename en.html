@@ -1337,7 +1337,7 @@
     </button>
     <button class="tab-btn" id="tabBtnBlog" onclick="switchTab('blog')">
       <span>Observation Reports</span>
-      <span class="tab-count-badge" id="blogCountBadge">4</span>
+      <span class="tab-count-badge" id="blogCountBadge">5</span>
     </button>
     <button class="tab-btn" id="tabBtnNote" onclick="switchTab('note')">
       <span>miyabuta Community</span>
@@ -1375,7 +1375,7 @@
     <div class="tab-panel" id="panel-blog">
       <div class="section-headline">
         <div class="section-title-text">In-depth Reports — Report</div>
-        <div class="section-meta-info">4 ARCHIVES</div>
+        <div class="section-meta-info">5 ARCHIVES</div>
       </div>
 
       <div class="report-list" id="blogList">
@@ -1440,7 +1440,7 @@
           <span class="stat-lbl">Total Specimens</span>
         </div>
         <div class="stat-card">
-          <span class="stat-val">4</span>
+          <span class="stat-val">5</span>
           <span class="stat-lbl">Deep Reports</span>
         </div>
         <div class="stat-card">
@@ -1523,7 +1523,7 @@
 <script>
 // ── 標本図鑑データ（全73件・最新85追加） ──────────────────────────────
 const fakeData = [
-  { num: '85',  title: '85', excerpt: '（野崎って複垢もあるけど、何でもかんでもアカウント重複しまくって人生半分それに奪われて損してますよね）…', date: '2026.10.12', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/10/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-10-12-17.56.31.png', url: 'http://zukaneditor.s323.xrea.com/2026/10/12/85/' },
+  { num: '85',  title: '85', excerpt: '（野崎って複垢もあるけど、何でもかんでもアカウント重複しまくって人生半分それに奪われて損してますよね）…', date: '2026.10.29', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/10/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-10-12-17.56.31.png', url: 'http://zukaneditor.s323.xrea.com/fake/85/' },
   { num: '84',  title: '84', excerpt: '何かと作らないと死ぬ病気なんですか？（ため息）…', date: '2026.08.31', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/08/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-08-31-20.38.24.png', url: 'http://zukaneditor.s323.xrea.com/fake/84/' },
   { num: '83',  title: '83', excerpt: 'これは小山同様ゴーストライター的な扱いだから入れ…', date: '2026.06.30', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-06-30-17.55.42.png', url: 'http://zukaneditor.s323.xrea.com/fake/83/' },
   { num: '82',  title: '82', excerpt: '要はこういうレベルの人らに絡んでる時点で同類って…', date: '2026.06.30', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2026/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-06-30-17.49.51.png', url: 'http://zukaneditor.s323.xrea.com/fake/82/' },
@@ -1610,8 +1610,16 @@ const fakeData = [
   { num: '①',  title: '①', excerpt: '【分類】 【主な言語特徴】 【行動パター…', date: '2025.12.17', img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/siiiiii.png', url: 'http://zukaneditor.s323.xrea.com/fake/%e2%91%a0/' },
 ];
 
-// ── 観察記録ブログデータ（指定の4件） ──────────────────────────────
+// ── 観察記録ブログデータ（指定の5件） ──────────────────────────────
 const blogData = [
+  {
+    title: '― The Essence of Hurting Others While Possessing a Conscience ―',
+    excerpt: 'Analyzing the psychology of individuals who, despite having affection, empathy, and moral judgment, prioritize self-interest and exploit or hurt others...',
+    date: 'Oct 12, 2026',
+    img: 'https://images.weserv.nl/?url=zukaneditor.s323.xrea.com/wp-content/uploads/2025/12/ChatGPT-Image-15_47_00-768x768.png',
+    url: 'http://zukaneditor.s323.xrea.com/2026/10/12/busaiku/',
+    cat: 'Deep Analysis',
+  },
   {
     title: '[Nise-Zukan Deep Analysis] The Monster\'s End — Distorted Narcissism and Bodily Dissociation',
     excerpt: 'The numerous personas analyzed so far were not mere "play," but a desperate attempt at self-burial to cover up one\'s unfaceable body and spirit...',
